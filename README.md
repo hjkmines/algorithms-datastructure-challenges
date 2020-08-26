@@ -1,1 +1,1 @@
-##A list of solved algorithm/data structures. 
+A list of solved algorithm/data structures. 
