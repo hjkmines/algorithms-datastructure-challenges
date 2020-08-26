@@ -152,4 +152,14 @@ function reverseInt(int) {
     return digits.toString().split('').reverse().join(''); 
 }
 
-console.log(reverseInt(parseInt(digits)))
+console.log(reverseInt(parseInt(digits))); 
+
+// CHALLENGE 4: CAPITALIZE LETTERS
+// Return a string with the first letter of every word capitalized
+// ex. capitalizeLetters('i love javascript') === 'I Love Javascript'
+const upperCaseThisSentence = 'hello tony'
+function capitalizeLetters(str) {
+    return str.toLowerCase().split(' ').map( word => word.charAt(0).toUpperCase() + word.substr(1)).join(' ')
+}   
+
+console.log(capitalizeLetters(upperCaseThisSentence)); 
