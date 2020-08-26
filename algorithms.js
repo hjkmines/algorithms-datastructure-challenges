@@ -130,3 +130,15 @@ console.log(staircase(10));
 // CHALLENGE 2: VALIDATE A PALINDROME
 // Return true if palindrome and false if not
 // ex. isPalindrome('racecar') === 'true', isPalindrome('hello') == false
+
+const palindrome = 'racecar'
+const notPalindrome = 'hello'
+function isPalindrome(str) {
+    if (str === str.split('').reverse().join('')) {
+        return true; 
+    } else {
+        return false; 
+    }
+}
+
+console.log(isPalindrome(notPalindrome))
