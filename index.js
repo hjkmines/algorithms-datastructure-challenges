@@ -60,7 +60,7 @@ function plusMinus(arr) {
             zero++; 
         }
     } )
-    const numbers = [positive, negative, zero]
+    const numbers = [positive/arr.length, negative/arr.length, zero/arr.length]
     const list = numbers.forEach( x => console.log(x)); 
 
     return list 
