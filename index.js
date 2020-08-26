@@ -99,3 +99,18 @@ console.log(staircase(10));
  }
 
  console.log(miniMaxSum(listOfNums))
+
+ //Problem 7: Birthday cake candles 
+
+ function cakeCandles(arr) {
+     const tallestCandle = Math.max(...arr); 
+     let count = 0; 
+
+     for (let i = 0; i < arr.length; i++) {
+         if(arr[i] === tallestCandle) {
+             count += 1; 
+         }
+     }
+
+     return count; 
+ }
