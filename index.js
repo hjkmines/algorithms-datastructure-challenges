@@ -44,3 +44,26 @@ function sumCross(arr) {
 
     return sum; 
 } 
+
+//Problem 4: Ratio of postive, negative, and zero.
+const someNums = [1, 2, 0, -1] 
+function plusMinus(arr) {
+    let positive = 0;
+    let negative = 0; 
+    let zero = 0; 
+    arr.forEach( x => {
+        if (x > 0) {
+            positive++; 
+        } else if (x < 0) {
+            negative++; 
+        } else {
+            zero++; 
+        }
+    } )
+    const numbers = [positive, negative, zero]
+    const list = numbers.forEach( x => console.log(x)); 
+
+    return list 
+}
+
+console.log(plusMinus(someNums))
