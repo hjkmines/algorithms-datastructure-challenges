@@ -67,3 +67,17 @@ function plusMinus(arr) {
 }
 
 console.log(plusMinus(someNums))
+
+//Problem 5: Staircase 
+function staircase(n) {
+    const pound = '#'
+    const pounds = []
+    for (let i = 1; i <= n; i++) {
+       pounds.push(pound.repeat(i)); 
+    }; 
+
+    const list = pounds.forEach(x => console.log(x)); 
+    return list; 
+}
+
+console.log(staircase(10)); 
