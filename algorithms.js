@@ -142,3 +142,14 @@ function isPalindrome(str) {
 }
 
 console.log(isPalindrome(notPalindrome))
+
+// CHALLENGE 3: REVERSE AN INTEGER
+// Return an integer in reverse
+// ex. reverseInt(521) === 125
+
+const digits = 1234
+function reverseInt(int) {
+    return digits.toString().split('').reverse().join(''); 
+}
+
+console.log(reverseInt(parseInt(digits)))
