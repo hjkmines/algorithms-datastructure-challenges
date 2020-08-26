@@ -81,3 +81,21 @@ function staircase(n) {
 }
 
 console.log(staircase(10)); 
+
+ ///Problem 6: Sum of min and max 
+
+ const listOfNums = [1, 3, 4, 10]
+ function miniMaxSum(arr) {
+    const min = Math.min(...arr); 
+    const max = Math.max(...arr); 
+
+    const maxSum = arr.filter((value, index, arr) => value > min).reduce((accum, currVal) => accum + currVal) 
+
+    const minSum = arr.filter((value, index, arr) => value < max).reduce((accum, currVal) => accum + currVal) 
+
+    const minMax = [minSum, maxSum].map(String)
+    return minMax.join(' ')
+
+ }
+
+ console.log(miniMaxSum(listOfNums))
