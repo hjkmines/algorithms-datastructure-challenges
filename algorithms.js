@@ -163,3 +163,17 @@ function capitalizeLetters(str) {
 }   
 
 console.log(capitalizeLetters(upperCaseThisSentence)); 
+
+// CHALLENGE 5: MAX CHARACTER
+// Return the character that is most common in a string
+// ex. maxCharacter('javascript') == 'a'
+const maxChar = 'hello'
+function maxCharacter(str) {
+    const count = str.split('').reduce((object, key) => {
+        object[key] ? object[key]++ : object[key] = 1
+    return object
+    }, {})
+    return Object.keys(count).reduce((a, b) => count[a] > count[b] ? a : b) 
+}
+
+console.log(maxCharacter(maxChar)); 
