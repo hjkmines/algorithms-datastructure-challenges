@@ -1,18 +1,21 @@
-//factory pattern 
-
-function Engineer(name) {
-    this.name = name;  
-    this.type = 'Engineer'; 
+//Factory Pattern 
+class Engineer {
+    constructor(name) {
+        this.name = name; 
+        this.type = 'Engineer'; 
+    }
 }
 
-function Tester(name) {
-    this.name = name; 
-    this.type = 'Tester'
+class Tester {
+    constructor(name) {
+        this.name = name; 
+        this.type = 'Tester'
+    }
 }
 
-function EmployeeFactory() {
+class empFactory {
 
-    this.create = (name, type) => {
+    createEmployee(name, type) {
         switch(type) {
             case 1: 
                 return new Engineer(name); 
@@ -20,18 +23,22 @@ function EmployeeFactory() {
             case 2: 
                 return new Tester(name); 
                 break; 
+            default:    
+                return 'Wrong input'
+                break; 
         }
     }
 
+    
 }
 
-function say() {
-    console.log(`Hi, my name is ${this.name} and I am a ${this.type}`); 
+function sayHi() {
+    console.log(`Hi my name is ${this.name} and I am a ${this.type}`);
 }
+//instantiate a new factory 
+const factory1 = new empFactory; 
+const employees = []
+employees.push(factory1.createEmployee('Tony', 1)); 
+employees.push(factory1.createEmployee('Bob', 2)); 
+employees.forEach( employee => sayHi.call(employee)); 
 
-const factory1 = new EmployeeFactory; 
-const employees = []; 
-employees.push(factory1.create('Tony', 1)); 
-employees.push(factory1.create('Bob', 2)); 
-
-employees.forEach( employee => say.call(employee)); 
