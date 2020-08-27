@@ -1,42 +1,49 @@
-class Deck{
-    constructor(){
-      this.deck = [];
-      this.reset();
-      this.shuffle();
+class Card {
+    constructor (suit, value) {
+        this.suit = suit; 
+        this.value = value; 
     }
-  
-    reset(){
-      this.deck = [];
-  
-      const suits = ['Hearts', 'Spades', 'Clubs', 'Diamonds'];
-      const values = ['Ace', 2, 3, 4, 5, 6, 7, 8, 9, 10, 'Jack', 'Queen', 'King'];
-  
-      for (let suit in suits) {
-        for (let value in values) {
-          this.deck.push(`${values[value]} of ${suits[suit]}`);
+}
+
+class Deck {
+    constructor() {
+        this.deck = []; 
+    }
+    
+    createDeck(suits, values) {
+        for (let suit of suits) {
+            for (let value of values) {
+                this.deck.push(new Card(suit, value)); 
+            }
         }
-      }
+        return this.deck; 
     }
-  
-    shuffle(){
-      const { deck } = this;
-      let m = deck.length, i;
-  
-      while(m){
-        i = Math.floor(Math.random() * m--);
-  
-        [deck[m], deck[i]] = [deck[i], deck[m]];
-      }
-  
-      return this;
+
+    shuffle() {
+        let counter = this.deck.length, temp, i; 
+
+        while(counter) {
+            i = Math.floor(Math.random() * counter--) 
+                temp = this.deck[counter]; 
+                this.deck[counter] = this.deck[i]; 
+                this.deck[i] = temp; 
+            }
+            return this.deck; 
+        }
+    
+
+    deal() {
+        let hand = []; 
+        while(hand.length < 2) {
+            hand.push(this.deck.pop()); 
+        }
+        return hand; 
     }
-  
-    deal(){
-      return this.deck.pop();
-    }
-  }
-  
-  const deck1 = new Deck();
-  console.log(deck1.deck);
-  deck1.reset();
-  console.log(deck1.deck);
+}
+
+let suits = ['Hearts', 'Diamond', 'Clubs', 'Spades']; 
+let values = [2, 3, 4, 5, 6, 7, 8, 9, 10, 'Jack', 'Queen', 'King', 'Ace']; 
+let deck = new Deck(); 
+deck.createDeck(suits, values); 
+deck.shuffle();
+console.log(deck.deal());  
