@@ -1,3 +1,5 @@
+//Single Responsibility Principle: a class should only have one job and one reason for change. 
+
 import logMessage from './logger'; 
 
 class CalorieTracker {

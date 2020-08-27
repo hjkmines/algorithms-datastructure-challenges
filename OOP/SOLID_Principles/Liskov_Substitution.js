@@ -1,3 +1,5 @@
+//Liskov Principle: if you pass in a a class into a function, any of its subclasses should work just as well. 
+
 class FlyingBird {
     fly() {
         console.log('I can fly')

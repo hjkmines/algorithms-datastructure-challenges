@@ -1,4 +1,8 @@
-function printQuiz(questions) {
+// Open/Closed Principle: a method or a class should be opened for extension, closed for modification. 
+//Open for Extension happens OUTSIDE of that class or method (another method or class). 
+//The original method is CLOSED for modifications. 
+
+function printQuiz(questions) {    //CLOSED
     questions.forEach(question => {
         console.log(question.description); 
         questions.printQuestionChoices(); 
@@ -6,6 +10,7 @@ function printQuiz(questions) {
     })
 }
 
+//A class is created like below for EXTENSION 
 class RangeQuestion {
     constructor(description) {
         this.description = description
