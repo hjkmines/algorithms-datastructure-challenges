@@ -1,31 +1,24 @@
-//Singleton pattern 
-class Process {
-    constructor(state) {
-        this.state = state; 
-    }
-}
+//Singleton Pattern 
+let obj = (function () {
 
-const Singleton = (function() {
-    function ProcessManager() {
-        this.numProcess = 0; 
-    }
+    //object 
+    let objInstance; 
 
-    let pManager 
+    //creates the objInstance if one isn't available 
+    function create() {
 
-    function createProcessManager() {
-        pManager = new ProcessManager()
-        return pManager; 
+        return {
+
+        }
     }
 
+    //checks to see if a object exists 
     return {
-        getProcessManager:() => {
-            if(!pManager)
-                pManager = createProcessManager(); 
-                return pManager
+        getInstance: function() {
+            if(!objInstance) {
+                objInstance = create() 
+            }
+            return objInstance; 
         }
     }
 })()
-
-const processManager = Singleton.getProcessManager()
-const processManager2 = Singleton.getProcessManager()
-console.log(processManager === processManager2); 
