@@ -33,7 +33,8 @@ class empFactory {
 }
 
 function sayHi() {
-    console.log(`Hi my name is ${this.name} and I am a ${this.type}`);
+    console.log(`Hi my name is ${this.name} 
+    and I am a ${this.type}`);
 }
 //instantiate a new factory 
 const factory1 = new empFactory; 

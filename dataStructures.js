@@ -87,3 +87,7 @@ class Deck {
   console.log(deck1.deck);
   deck1.deal()
   console.log(deck1.deck);
+
+  class Card {
+      constructor(suit, vale)
+  }
