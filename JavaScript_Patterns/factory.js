@@ -42,4 +42,3 @@ const employees = []
 employees.push(factory1.createEmployee('Tony', 1)); 
 employees.push(factory1.createEmployee('Bob', 2)); 
 employees.forEach( employee => sayHi.call(employee)); 
-
