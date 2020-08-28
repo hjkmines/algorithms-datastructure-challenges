@@ -6,6 +6,8 @@ class Card {
     }
 }
 
+
+
 class Deck {
     constructor() {
         this.deck = []; 
@@ -48,3 +50,4 @@ const deck = new Deck;
 deck.createDeck(suits, values); 
 deck.shuffle(); 
 console.log(deck.deal()); 
+
