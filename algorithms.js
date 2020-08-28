@@ -198,3 +198,15 @@ function fizzBuzz() {
 }
 
 console.log(fizzBuzz()); 
+
+// CHALLENGE 7: Anagrams 
+
+function anagrams(str1, str2) {
+    const string1 = str1.split('').sort().join('').toLowerCase(); 
+    const string2 = str2.split('').sort().join('').toLowerCase();
+    return (string1 === string2);  
+}
+
+console.log(anagrams('hello', 'hello')); 
+console.log(anagrams('abcd', 'dabc')); 
+
