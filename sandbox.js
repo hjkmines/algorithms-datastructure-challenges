@@ -21,7 +21,7 @@
 // 2. Sum all doubled and untouched digits in the number
 // 3. If that total is a multiple of 10, the number is valid
 
-// For example, given the card number 4(double)40(doubled)8 0(double)41(doubled)2 3(doubled)45(doubled)6 7(doubled)89(doubled)3:
+// For example, given the card number 4408041234567893
 
 // Step 1:  8 4 0 8 0 4 2 2 6 4 10 6 14 8 18 3
 // Step 2:  8+4+0+8+0+4+2+2+6+4+1+0+6+1+4+8+1+8+3 = 70
@@ -92,4 +92,4 @@ function checkLuhnAlgo(numberText) {
 }
 
 // console.log(checkCreditCard('341255414551234')); 
-console.log(checkLuhnAlgo('3411111111')); 
+console.log(checkLuhnAlgo('4408041234567893')); 
