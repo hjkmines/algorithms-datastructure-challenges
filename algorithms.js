@@ -296,3 +296,11 @@ function letterChanges(str) {
 const output = letterChanges('Hello There');
 
 console.log(output);
+
+// CHALLENGE 13: ADD ALL NUMBERS
+// Return a sum of all parameters entered regardless of the amount of numbers - NO ARRAYS
+// ex. addAll(2,5,6,7) === 20
+// Solution 1: ES5 arguments & for loop
+function addAll(...numbers) {
+    return numbers.reduce((accu, curr) => accu + curr); 
+  }
