@@ -216,8 +216,12 @@ console.log(anagrams('abcd', 'dabc'));
 // ex. longestWord('Hi there, my name is Brad') === 'there,'
 
 function longestWord(sentence) {
-    const arrayOfSentences = sentence.split(''); 
-    return arrayOfSentences; 
+    const arrayOfSentences = sentence.split(' '); 
+    const countLength = arrayOfSentences.map( word => word.length); 
+    const longestWordCount = Math.max(...countLength); 
+    const longestWordInSentence =  arrayOfSentences.find( word => word.length === longestWordCount); 
+    return longestWordInSentence; 
 }
 
 console.log(longestWord('Hi my name is Alexander'))
+
