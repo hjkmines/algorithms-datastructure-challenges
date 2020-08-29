@@ -329,3 +329,17 @@ function sumAllPrimes(num) {
   }
 
   console.log(sumAllPrimes(10)); 
+
+// CHALLENGE 15: SEEK & DESTROY
+// Remove from the array whatever is in the following arguments. Return the leftover values in an array
+// ex. seekAndDestroy([2, 3, 4, 6, 6, 'hello'], 2, 6) == [3, 4, 'hello']
+function seekAndDestroy(arr) {
+    const args = Array.from(arguments);
+  
+    function filterArr(arr) {
+      // Return true if NOT in array
+      return args.indexOf(arr) === -1;
+    }
+  
+    return arr.filter(filterArr);
+  }
