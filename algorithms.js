@@ -275,7 +275,7 @@ function isAnagram(str1, str2) {
 console.log(isAnagram('bob', 'joe')); 
 console.log(isAnagram('hello', 'elloh')); 
 
-// CHALLENGE 5: LETTER CHANGES
+// CHALLENGE 12: LETTER CHANGES
 // Change every letter of the string to the one that follows it and capitalize the vowels
 // Z should turn to A
 // ex. 'hello there' === 'Ifmmp UIfsf'
@@ -292,5 +292,7 @@ function letterChanges(str) {
     
       return newStr;
 }
+// Call Function
+const output = letterChanges('Hello There');
 
-console.log(letterChanges('hello there')); 
+console.log(output);
