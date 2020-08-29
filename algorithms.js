@@ -210,3 +210,14 @@ function anagrams(str1, str2) {
 console.log(anagrams('hello', 'hello')); 
 console.log(anagrams('abcd', 'dabc')); 
 
+  
+// CHALLENGE 8: LONGEST WORD
+// Return the longest word of a string
+// ex. longestWord('Hi there, my name is Brad') === 'there,'
+
+function longestWord(sentence) {
+    const arrayOfSentences = sentence.split(''); 
+    return arrayOfSentences; 
+}
+
+console.log(longestWord('Hi my name is Alexander'))
