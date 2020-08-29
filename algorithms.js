@@ -249,7 +249,7 @@ function chunkArray(arr, len) {
 
 console.log(chunkArray([1, 2, 3, 4, 5, 6, 7], 3)); 
 
-// CHALLENGE 3: FLATTEN ARRAY
+// CHALLENGE 10: FLATTEN ARRAY
 // Take an array of arrays and flatten to a single array
 // ex. [[1, 2], [3, 4], [5, 6], [7]] = [1, 2, 3, 4, 5, 6, 7]
 function flattenArray(arrays) {
@@ -257,3 +257,20 @@ function flattenArray(arrays) {
 }
 
 console.log(flattenArray([[1, 2, 3],[4, 5, 6],[7]])); 
+
+// CHALLENGE 11: ANAGRAM
+// Return true if anagram and false if not
+// ex. 'elbow' === 'below'
+// ex. 'Dormitory' === 'dirty room##'
+function isAnagram(str1, str2) {
+    const sortedStr1 = str1.split('').sort().join('').toLowerCase(); 
+    const sortedStr2 = str2.split('').sort().join('').toLowerCase(); 
+    if (sortedStr1 === sortedStr2) {
+        return true; 
+    } else {
+        return false; 
+    }
+}
+
+console.log(isAnagram('bob', 'joe')); 
+console.log(isAnagram('hello', 'elloh')); 
