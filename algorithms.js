@@ -14,6 +14,15 @@ function evens() {
 
 evens(); 
 
+//Warm up 2
+//Take a nested array and sum up all the numbers in the array. 
+
+function sumNestedArray(arr) {
+    return arr.flat().reduce((acc, val) => acc + val)
+}
+
+sumNestedArray([[1,2,3], [10,[23, 43]]]); 
+
 //Problem 1: compare numbers and rank each category 
 const alice = [10,33, 55]; 
 const bob = [3, 33, 32]; 
