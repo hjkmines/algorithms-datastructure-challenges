@@ -42,3 +42,13 @@ Common questions to know:
 1. What is the difference between two-way and one-way binding? What are common frameworks that use these. 
 
 1. What is Unit Testing? What are some unit testing tools you use on a day-to-day basis? What is it important to unit test your code?
+
+1. What are the four pillars that make up OOP? Give a code example of each pillar. 
+
+1. What does it mean when something is non-blocking such as Node.js?
+
+1. What is the virtual DOM and why is it considered more efficient than utilizing the actual DOM?
+
+1. What is the difference between SQL and NoSQL. Why use one for the other?
+
+
