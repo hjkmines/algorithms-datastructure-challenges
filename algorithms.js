@@ -1,4 +1,19 @@
 
+//warm up problems 
+
+//Warm up 1 
+//Print all the even numbers from 0 to 100
+
+function evens() {
+    for (let i = 0; i < 101; i++) {
+        if ((i % 2) === 0) {
+            console.log(i); 
+        } 
+    }
+}
+
+evens(); 
+
 //Problem 1: compare numbers and rank each category 
 const alice = [10,33, 55]; 
 const bob = [3, 33, 32]; 
@@ -375,3 +390,4 @@ function evenOddSums(arr) {
   
     return [evenSum, oddSum];
   }
+
