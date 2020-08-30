@@ -36,3 +36,9 @@ Common questions to know:
 1. Decribe the difference betewen monolithic and microservice. What are its pros and cons of each?
 
 1. What is async/await and why is it so useful?
+
+1. Why is funtion composition better than class inheritance?
+
+1. What is the difference between two-way and one-way binding? What are common frameworks that use these. 
+
+1. What is Unit Testing? What are some unit testing tools you use on a day-to-day basis? What is it important to unit test your code?
