@@ -37,7 +37,15 @@ Common questions to know:
 
 1. What is async/await and why is it so useful?
 
-1. Why is funtion composition better than class inheritance?
+1. Why is function composition better than class inheritance?
+
+1. Why is Big O notation so important in software engineering?
+
+1. Describe how you would build out a full stack application.
+
+1. Can you describe 'this' in JavaScript?
+
+1. Describe how the MVC model works. 
 
 1. What is the difference between two-way and one-way binding? What are common frameworks that use these. 
 
