@@ -23,6 +23,24 @@ function sumNestedArray(arr) {
 
 sumNestedArray([[1,2,3], [10,[23, 43]]]); 
 
+//Warm up 3
+//take a array of letters and number, put them in separate arrays by data type 
+
+function separateArr(arr) {
+    const letters = []; 
+    const numbers = []; 
+
+    arr.forEach(element => {
+        if(typeof element === String) {
+            letters.push(element)
+        } else {
+            numbers.push(element)
+        }
+    })
+}
+
+separateArr([1, 2, 'e', 'd', 55]); 
+
 //Problem 1: compare numbers and rank each category 
 const alice = [10,33, 55]; 
 const bob = [3, 33, 32]; 
