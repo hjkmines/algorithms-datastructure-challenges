@@ -41,6 +41,23 @@ function separateArr(arr) {
 
 separateArr([1, 2, 'e', 'd', 55]); 
 
+
+//Warm up 4 
+//Given a list of numbers, sum up all numbers if it is above a certain number 
+
+function sumUp(arr, condition) {
+    const arr = []
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > condition) {
+            arr.push(arr[i])
+        }
+    }
+
+    return arr.reduce((acc, val) => acc + val)
+}
+
+sumUp([1, 10, 55, -4, 49, 3], 10); 
+
 //Problem 1: compare numbers and rank each category 
 const alice = [10,33, 55]; 
 const bob = [3, 33, 32]; 
