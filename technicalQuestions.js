@@ -72,3 +72,27 @@ console.log(0.1 + 0.2 == 0.3);
 //Solution: 
 0.30000000000000004
 false
+
+// Q7. In what order will the numbers 1-4 be logged to the console when the code below is executed? Why?
+(function() {
+    console.log(1); 
+    setTimeout(function(){console.log(2)}, 1000); 
+    setTimeout(function(){console.log(3)}, 0); 
+    console.log(4);
+})();
+
+//Solution: 
+1
+4
+3
+2
+
+// Q8. Write a simple function (less than 160 characters) that returns a boolean indicating whether or not a string is a palindrome.
+
+//Solution: 
+function isPalindrome(str) {
+    str = str.replace(/\W/g, '').toLowerCase();
+    return (str == str.split('').reverse().join(''));
+  }
+
+  
