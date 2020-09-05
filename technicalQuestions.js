@@ -95,4 +95,27 @@ function isPalindrome(str) {
     return (str == str.split('').reverse().join(''));
   }
 
+//Q9. Write a sum method which will work properly when invoked using either syntax below.
+
+console.log(sum(2,3));   // Outputs 5
+console.log(sum(2)(3));  // Outputs 5
+
+//Solution: 
+function sum(x) {
+    if (arguments.length == 2) {
+      return arguments[0] + arguments[1];
+    } else {
+      return function(y) { return x + y; };
+    }
+  }
+
+//Second solution: 
+function sum(x, y) {
+    if (y !== undefined) {
+      return x + y;
+    } else {
+      return function(y) { return x + y; };
+    }
+  }
+
   
