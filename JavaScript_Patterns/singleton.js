@@ -1,6 +1,4 @@
-//Singleton Pattern 
 let obj = (function () {
-
     //object 
     let objInstance; 
 
@@ -36,3 +34,5 @@ let obj = (function () {
 
 let obj1 = obj.getInstance(); 
 let obj2 = obj.getInstance(); 
+
+

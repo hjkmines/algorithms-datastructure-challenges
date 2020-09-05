@@ -1,4 +1,3 @@
-//Factory Pattern 
 class Engineer {
     constructor(name) {
         this.name = name; 
@@ -14,7 +13,6 @@ class Tester {
 }
 
 class empFactory {
-
     createEmployee(name, type) {
         switch(type) {
             case 1: 
@@ -28,17 +26,17 @@ class empFactory {
                 break; 
         }
     }
-
-    
 }
 
 function sayHi() {
     console.log(`Hi my name is ${this.name} 
     and I am a ${this.type}`);
 }
-//instantiate a new factory 
+
 const factory1 = new empFactory; 
 const employees = []
 employees.push(factory1.createEmployee('Tony', 1)); 
 employees.push(factory1.createEmployee('Bob', 2)); 
 employees.forEach( employee => sayHi.call(employee)); 
+
+

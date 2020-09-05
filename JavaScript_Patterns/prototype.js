@@ -18,3 +18,5 @@ var myCar= {
     var yourCar = object.create(myCar);
     //You can now see that one is a prototype of the other
     console.log (yourCar.name);
+
+    

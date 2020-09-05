@@ -17,7 +17,6 @@ function AdvancedShipping() {
 }
  
 // adapter interface
- 
 function ShippingAdapter(credentials) {
     var shipping = new AdvancedShipping();
  
@@ -31,8 +30,6 @@ function ShippingAdapter(credentials) {
         }
     };
 }
- 
-// log helper
  
 var log = (function () {
     var log = "";
