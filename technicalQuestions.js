@@ -43,3 +43,32 @@ inner func:  self.foo = bar
 
 (function($) { /* jQuery plugin code referencing $ */ } )(jQuery);
 
+// Q5. What is the significance, and what are the benefits, of including 'use strict' at the beginning of a JavaScript source file?
+
+//Solution: The short and most important answer here is that use strict is a way to voluntarily enforce stricter parsing and error handling on your JavaScript code at runtime. Code errors that would otherwise have been ignored or would have failed silently will now generate errors or throw exceptions. In general, it is a good practice.
+
+// Q6. Consider the two functions below. Will they both return the same thing? Why or why not?
+
+//Solution: 
+function foo1()
+{
+  return {
+      bar: "hello"
+  };
+}
+
+function foo2()
+{
+  return
+  {
+      bar: "hello"
+  };
+}
+
+// Q6. What will the code below output? Explain your answer.
+console.log(0.1 + 0.2);
+console.log(0.1 + 0.2 == 0.3);
+
+//Solution: 
+0.30000000000000004
+false
