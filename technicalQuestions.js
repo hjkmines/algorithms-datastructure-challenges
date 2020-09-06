@@ -206,3 +206,37 @@ function sum(x, y) {
 
 //Explanation: 
 // var statements are hoisted (without their value initialization) to the top of the global or function scope it belongs to, even when it’s inside a with or catch block. However, the error’s identifier is only visible inside the catch block. It is equivalent to
+
+// What will the following code output to the console and why:
+var hero = {
+  _name: 'John Doe',
+  getSecretIdentity: function (){
+      return this._name;
+  }
+};
+
+var stoleSecretIdentity = hero.getSecretIdentity;
+
+console.log(stoleSecretIdentity());
+console.log(hero.getSecretIdentity());
+
+//Solution: 
+undefined
+John Doe
+
+//Explanation: The first console.log prints undefined because we are extracting the method from the hero object, so stoleSecretIdentity() is being invoked in the global context (i.e., the window object) where the _name property does not exist.
+
+//What is the output out of the following code? Explain your answer.
+var a={},
+    b={key:'b'},
+    c={key:'c'};
+
+a[b]=123;
+a[c]=456;
+
+console.log(a[b]);
+
+//Solution: 
+The output of this code will be 456 (not 123).
+
+// The reason for this is as follows: When setting an object property, JavaScript will implicitly stringify the parameter value. In this case, since b and c are both objects, they will both be converted to "[object Object]". As a result, a[b] anda[c] are both equivalent to a["[object Object]"] and can be used interchangeably. Therefore, setting or referencing a[c] is precisely the same as setting or referencing a[b].
