@@ -175,3 +175,34 @@ function sum(x, y) {
 //explaination: Output to the console will be “3”.
 
 // There are three closures in the example, each with it’s own var b declaration. When a variable is invoked closures will be checked in order from local to global until an instance is found. Since the inner closure has a b variable of its own, that is what will be output.
+
+
+// Consider the following code. What will the output be, and why?
+(function () {
+  try {
+      throw new Error();
+  } catch (x) {
+      var x = 1, y = 2;
+      console.log(x);
+  }
+  console.log(x);
+  console.log(y);
+})();
+
+//Solution 
+(function () {
+  var x, y; // outer and hoisted
+  try {
+      throw new Error();
+  } catch (x /* inner */) {
+      x = 1; // inner x, not the outer one
+      y = 2; // there is only one y, which is in the outer scope
+      console.log(x /* inner */);
+  }
+  console.log(x);
+  console.log(y);
+})();
+
+
+//Explanation: 
+// var statements are hoisted (without their value initialization) to the top of the global or function scope it belongs to, even when it’s inside a with or catch block. However, the error’s identifier is only visible inside the catch block. It is equivalent to
