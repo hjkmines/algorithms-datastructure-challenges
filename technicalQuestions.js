@@ -424,3 +424,32 @@ const symmetricDifferenceBy = (a, b, fn) => {
   return [...a.filter(x => !sB.has(fn(x))), ...b.filter(x => !sA.has(fn(x)))];
 };
 console.log(symmetricDifferenceBy([2.1, 1.2], [2.3, 3.4], Math.floor));
+
+//Write a JavaScript program to create a specified currency formatting from a given number.
+
+const toCurrency = (n, curr, LanguageFormat = undefined) =>
+  Intl.NumberFormat(LanguageFormat, { style: 'currency', currency: curr }).format(n);
+
+console.log(toCurrency(123456.789, 'EUR')); // currency: Euro | currencyLangFormat: Local
+console.log(toCurrency(123456.789, 'USD', 'en-us')); // currency: US Dollar | currencyLangFormat: English (United States)
+console.log(toCurrency(123456.789, 'USD', 'fa')); //currency: US Dollar | currencyLangFormat: Farsi
+console.log(toCurrency(322342436423.2435, 'JPY')); //currency: Japanese Yen | currencyLangFormat: Local
+console.log(toCurrency(322342436423.2435, 'JPY', 'fi')); //currency: Japanese Yen | currencyLangFormat: Finnish
+
+//Write a JavaScript program to add an ordinal suffix to a number.
+
+const toOrdinalSuffix = num => {
+  const int = parseInt(num),
+    digits = [int % 10, int % 100],
+    ordinals = ['st', 'nd', 'rd', 'th'],
+    oPattern = [1, 2, 3, 4],
+    tPattern = [11, 12, 13, 14, 15, 16, 17, 18, 19];
+  return oPattern.includes(digits[0]) && !tPattern.includes(digits[1])
+    ? int + ordinals[digits[0] - 1]
+    : int + ordinals[3];
+};
+
+console.log(toOrdinalSuffix('1')); 
+console.log(toOrdinalSuffix('4')); 
+console.log(toOrdinalSuffix('50')); 
+console.log(toOrdinalSuffix('123'));
