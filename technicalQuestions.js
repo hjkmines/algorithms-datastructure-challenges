@@ -360,3 +360,27 @@ const copy_to_Clipboard = str => {
     document.getSelection().addRange(selected);
   }
 };
+
+//Write a JavaScript program to run a given array of promises in series.
+const runPromisesInSeries = ps => ps.reduce((p, next) => p.then(next), Promise.resolve());
+const delay = d => new Promise(r => setTimeout(r, d));
+
+// Executes each promise sequentially, taking a total of 3 seconds to complete
+
+runPromisesInSeries([() => delay(1000), () => delay(2000)]);
+
+//Write a JavaScript program to get a random element from an array.
+const sample = arr => arr[Math.floor(Math.random() * arr.length)];
+console.log(sample([3, 7, 9, 11]));
+
+//Write a JavaScript program to hash the input string into a whole number.
+const sdbm = str => {
+  let arr = str.split('');
+  return arr.reduce(
+    (hashCode, currentVal) =>
+      (hashCode = currentVal.charCodeAt(0) + (hashCode << 6) + (hashCode << 16) - hashCode),
+    0
+  );
+};
+
+console.log(sdbm('name'));
