@@ -404,3 +404,23 @@ console.log(shuffle(foo));
 const similarity = (arr, values) => arr.filter(v => values.includes(v));
 
 console.log(similarity([1, 2, 3], [1, 2, 4]));
+
+//Write a JavaScript program to get the highest index at which value should be inserted into array in order to maintain its sort order, based on a provided iterator function.
+const sortedLastIndexBy = (arr, n, fn) => {
+  const isDescending = fn(arr[0]) > fn(arr[arr.length - 1]);
+  const val = fn(n);
+  const index = arr
+    .map(fn)
+    .reverse()
+    .findIndex(el => (isDescending ? val <= el : val >= el));
+  return index === -1 ? 0 : arr.length - index;
+};
+console.log(sortedLastIndexBy([{ x: 4 }, { x: 5 }], { x: 4 }, o => o.x));
+
+//Write a JavaScript program to get the symmetric difference between two given arrays, after applying the provided function to each array element of both.
+const symmetricDifferenceBy = (a, b, fn) => {
+  const sA = new Set(a.map(v => fn(v))),
+    sB = new Set(b.map(v => fn(v)));
+  return [...a.filter(x => !sB.has(fn(x))), ...b.filter(x => !sA.has(fn(x)))];
+};
+console.log(symmetricDifferenceBy([2.1, 1.2], [2.3, 3.4], Math.floor));
