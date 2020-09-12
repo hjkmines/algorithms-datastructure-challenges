@@ -453,3 +453,28 @@ console.log(toOrdinalSuffix('1'));
 console.log(toOrdinalSuffix('4')); 
 console.log(toOrdinalSuffix('50')); 
 console.log(toOrdinalSuffix('123'));
+
+//Write a JavaScript program to get all unique values of an array, based on a provided comparator function.
+
+const uniqueElementsBy = (arr, fn) =>
+  arr.reduce((acc, v) => {
+    if (!acc.some(x => fn(v, x))) acc.push(v);
+    return acc;
+  }, []);
+
+console.log(uniqueElementsBy(
+  [
+    { id: 0, value: 'a' },
+    { id: 1, value: 'b' },
+    { id: 2, value: 'c' },
+    { id: 1, value: 'd' },
+    { id: 0, value: 'e' }
+  ],
+  (a, b) => a.id == b.id
+));
+
+//Write a JavaScript program to return the object associating the properties to the values of a given array of valid property identifiers and an array of values.
+const zipObject = (props, values) =>
+  props.reduce((obj, prop, index) => ((obj[prop] = values[index]), obj), {});
+console.log(zipObject(['a', 'b', 'c'], [1, 2])); 
+console.log(zipObject(['a', 'b'], [1, 2, 3]));
